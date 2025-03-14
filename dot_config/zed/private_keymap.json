@@ -1,0 +1,75 @@
+[
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      // Put key bindings here if you want them to work in normal & visual mode.
+      "space b d": [
+        "pane::CloseActiveItem",
+        {
+          "close_pinned": false
+        }
+      ],
+      "L": "pane::ActivateNextItem",
+      "H": "pane::ActivatePreviousItem",
+      "alt-j": "editor::MoveLineDown",
+      "alt-k": "editor::MoveLineUp",
+      "ctrl-space": "editor::SelectLargerSyntaxNode", // Expand Selection
+      "backspace": "editor::SelectSmallerSyntaxNode", // Shrink Selection
+      "space g g": [
+        "task::Spawn",
+        {
+          "task_name": "start lazygit",
+          "reveal_target": "center"
+        }
+      ],
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "space c a": "editor::ToggleCodeActions",
+      "space \\": "pane::SplitRight",
+      "space -": "pane::SplitDown"
+    }
+  },
+  {
+    "context": "vim_mode == normal && !menu",
+    "bindings": {
+      "shift-y": ["workspace::SendKeystrokes", "y $"], // Use neovim's yank behavior: yank to end of line.
+      "space space": "file_finder::Toggle",
+      "space e": "pane::RevealInProjectPanel"
+    }
+  },
+  {
+    "context": "vim_mode == insert",
+    "bindings": {
+      "ctrl-s": ["workspace::SendKeystrokes", "escape : w enter"],
+      "alt-j": "editor::MoveLineDown",
+      "alt-k": "editor::MoveLineUp"
+    }
+  },
+  {
+    "context": "EmptyPane || SharedScreen",
+    "bindings": {
+      "space f": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "space e": "workspace::ToggleLeftDock"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-q": "workspace::ToggleBottomDock",
+      "ctrl-k": "terminal_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-g": ["task::Spawn", { "task_name": "start lazygit" }]
+    }
+  }
+]
