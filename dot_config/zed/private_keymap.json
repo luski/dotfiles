@@ -28,7 +28,8 @@
       "ctrl-j": "workspace::ActivatePaneDown",
       "space c a": "editor::ToggleCodeActions",
       "space \\": "pane::SplitRight",
-      "space -": "pane::SplitDown"
+      "space -": "pane::SplitDown",
+      "space b o": ["pane::CloseCleanItems", { "close_pinned": false }]
     }
   },
   {
@@ -62,7 +63,7 @@
   {
     "context": "Terminal",
     "bindings": {
-      "ctrl-q": "workspace::ToggleBottomDock",
+      "ctrl-`": "workspace::ToggleBottomDock",
       "ctrl-k": "terminal_panel::ToggleFocus"
     }
   },

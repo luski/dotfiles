@@ -11,69 +11,69 @@ vim.keymap.set("n", "<leader>\\", "<C-W>v", { desc = "Split Window Right", remap
 -- Package Info:
 -- Show dependency versions
 vim.keymap.set(
-  { "n" },
-  "<LEADER>ns",
-  require("package-info").show,
-  { silent = true, noremap = true, desc = "Show node dependency versions" }
+	{ "n" },
+	"<LEADER>ps",
+	require("package-info").show,
+	{ silent = true, noremap = true, desc = "Show node dependency versions" }
 )
 
 -- Hide dependency versions
 vim.keymap.set(
-  { "n" },
-  "<LEADER>nc",
-  require("package-info").hide,
-  { silent = true, noremap = true, desc = "Hide node dependency versions" }
+	{ "n" },
+	"<LEADER>pc",
+	require("package-info").hide,
+	{ silent = true, noremap = true, desc = "Hide node dependency versions" }
 )
 
 -- Toggle dependency versions
 vim.keymap.set(
-  { "n" },
-  "<LEADER>nt",
-  require("package-info").toggle,
-  { silent = true, noremap = true, desc = "Toggle node dependency versions" }
+	{ "n" },
+	"<LEADER>pt",
+	require("package-info").toggle,
+	{ silent = true, noremap = true, desc = "Toggle node dependency versions" }
 )
 
 -- Update dependency on the line
 vim.keymap.set(
-  { "n" },
-  "<LEADER>nu",
-  require("package-info").update,
-  { silent = true, noremap = true, desc = "Update dependency on the line" }
+	{ "n" },
+	"<LEADER>pu",
+	require("package-info").update,
+	{ silent = true, noremap = true, desc = "Update dependency on the line" }
 )
 
 -- Delete dependency on the line
 vim.keymap.set(
-  { "n" },
-  "<LEADER>nd",
-  require("package-info").delete,
-  { silent = true, noremap = true, desc = "Delete dependency on the line" }
+	{ "n" },
+	"<LEADER>pd",
+	require("package-info").delete,
+	{ silent = true, noremap = true, desc = "Delete dependency on the line" }
 )
 
 -- Install a new dependency
 vim.keymap.set(
-  { "n" },
-  "<LEADER>ni",
-  require("package-info").install,
-  { silent = true, noremap = true, desc = "Install a new dependency" }
+	{ "n" },
+	"<LEADER>pi",
+	require("package-info").install,
+	{ silent = true, noremap = true, desc = "Install a new dependency" }
 )
 
 -- Install a different dependency version
 vim.keymap.set(
-  { "n" },
-  "<LEADER>np",
-  require("package-info").change_version,
-  { silent = true, noremap = true, desc = "Install a different dependency version" }
+	{ "n" },
+	"<LEADER>pp",
+	require("package-info").change_version,
+	{ silent = true, noremap = true, desc = "Install a different dependency version" }
 )
 
 -- Custom copilot accepting keymap
 vim.keymap.set("i", "<Tab>", function()
-  if require("copilot.suggestion").is_visible() then
-    require("copilot.suggestion").accept()
-  else
-    vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Tab>", true, false, true), "n", false)
-  end
+	if require("copilot.suggestion").is_visible() then
+		require("copilot.suggestion").accept()
+	else
+		vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Tab>", true, false, true), "n", false)
+	end
 end, {
-  silent = true,
+	silent = true,
 })
 
 -- Mapowanie w trybie normalnym
@@ -81,3 +81,6 @@ vim.keymap.set("n", "<C-A-c>", ":Lazy reload copilot.lua<CR>", { noremap = true,
 
 -- Mapowanie w trybie insert
 vim.keymap.set("i", "<C-A-c>", "<Esc>:Lazy reload copilot.lua<CR>", { noremap = true, silent = true })
+
+-- Prevent from replacing the buffer when pasting highlighted text
+vim.keymap.set("x", "<leader>p", '"_dP', { desc = "Paste without replacing the buffer" })
