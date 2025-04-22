@@ -1,6 +1,5 @@
-# theme = tokyonight
-window-decoration = false
 adw-toolbar-style = flat
+gtk-titlebar = false
 window-theme = ghostty
 adjust-cell-height = 20%
 font-size = 11
