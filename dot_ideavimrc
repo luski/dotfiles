@@ -1,34 +1,68 @@
-" .ideavimrc is a configuration file for IdeaVim plugin. It uses
-"   the same commands as the original .vimrc configuration.
-" You can find a list of commands here: https://jb.gg/h38q75
-" Find more examples here: https://jb.gg/share-ideavimrc
+let mapleader=" "
 
+""" Plugins  --------------------------------
 
-"" -- Suggested options --
-" Show a few lines of context around the cursor. Note that this makes the
-" text scroll if you mouse-click near the start or end of the window.
-set scrolloff=5
-
-" Do incremental searching.
-set incsearch
-
-" Don't use Ex mode, use Q for formatting.
-map Q gq
-
-" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
-
-" Highlight copied text
+set matchit
+set surround
+set multiple-cursors
+set commentary
+set argtextobj
+set textobj-entire
+set mini-ai
+set NERDTree
+set ReplaceWithRegister
+" In IntelliJ IDEA: Settings/Preferences → Plugins → Marketplace → Search for "Vim-Peekaboo"
+set peekaboo
+" Install Which-Key plugin.
+set which-key
+set exchange
+" Trying the new syntax
 Plug 'machakann/vim-highlightedyank'
-" Commentary plugin
 Plug 'tpope/vim-commentary'
 
+""" Plugin settings -------------------------
+let g:argtextobj_pairs="[:],(:),<:>"
+""" which-key settings
+" disable the timeout option
+set notimeout
+" NERDTree
+map <leader>e :NERDTree <Enter>
+""" -----------------------------------------
 
-"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
-"" Map \r to the Reformat Code action
-"map \r <Action>(ReformatCode)
 
-"" Map <leader>d to start debug
-"map <leader>d <Action>(Debug)
+" <C-n> seems to me as a better solution than <M-n>,
+" but we should finally support vim-visual-multi because vim-multiple-cursors is deprecated now
+map <C-n> <Plug>NextWholeOccurrence
 
-"" Map \b to toggle the breakpoint on the current line
-"map \b <Action>(ToggleLineBreakpoint)
+""" Common settings -------------------------
+set showmode
+set so=5
+set incsearch
+set nu
+set scrolloff=5
+
+""" Idea specific settings ------------------
+set ideajoin
+set ideastatusicon=gray
+
+""" My Mappings -----------------------------
+
+map <leader>gr <Action>(RenameElement)
+map <leader>z <Action>(ToggleDistractionFreeMode)
+
+map <leader>s <Action>(SelectInProjectView)
+map <leader>gb <Action>(Annotate)
+map <leader>gh <Action>(Vcs.ShowTabbedFileHistory)
+map ]d <Action>(GotoNextError)
+map [d <Action>(GotoPreviousError)
+
+map <leader>o <Action>(FileStructurePopup)
+
+map <leader>J Ji <ESC>
+
+map <A-j> <Action>(MoveStatementDown)
+map <A-k> <Action>(MoveStatementUp)
+
+""" Tabs navigation
+map H <Action>(PreviousTab)
+map L <Action>(NextTab)
