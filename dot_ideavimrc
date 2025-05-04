@@ -11,6 +11,7 @@ set textobj-entire
 set mini-ai
 set NERDTree
 set ReplaceWithRegister
+set hlsearch
 " In IntelliJ IDEA: Settings/Preferences → Plugins → Marketplace → Search for "Vim-Peekaboo"
 set peekaboo
 " Install Which-Key plugin.
@@ -27,6 +28,7 @@ let g:argtextobj_pairs="[:],(:),<:>"
 set notimeout
 " NERDTree
 map <leader>e :NERDTree <Enter>
+map <leader>E :NERDTreeClose <Enter>
 """ -----------------------------------------
 
 
@@ -38,8 +40,11 @@ map <C-n> <Plug>NextWholeOccurrence
 set showmode
 set so=5
 set incsearch
+set ignorecase
+set smartcase
 set nu
 set scrolloff=5
+set clipboard^=unnamed,unnamedplus
 
 """ Idea specific settings ------------------
 set ideajoin
@@ -47,6 +52,10 @@ set ideastatusicon=gray
 
 """ My Mappings -----------------------------
 
+" open vim configuration
+noremap <leader>fc :e ~/.ideavimrc<cr>
+noremap <leader>bd :q<cr>
+noremap <Esc> :nohlsearch<cr>
 map <leader>gr <Action>(RenameElement)
 map <leader>z <Action>(ToggleDistractionFreeMode)
 
@@ -63,6 +72,20 @@ map <leader>J Ji <ESC>
 map <A-j> <Action>(MoveStatementDown)
 map <A-k> <Action>(MoveStatementUp)
 
+map <leader>cf <Action>(ReformatCode)
+
 """ Tabs navigation
 map H <Action>(PreviousTab)
 map L <Action>(NextTab)
+map <leader>bo <Action>(CloseAllEditorsButActive)
+map <leader>\ <Action>(SplitVertically)
+map <leader>- <Action>(SplitHorizontally)
+map <C-h> <Action>(PrevSplitter)
+map <C-l> <Action>(NextSplitter)
+
+""" smart select
+map <C-Space> <Action>(EditorSelectWord)
+map <Backspace> <Action>(EditorUnSelectWord)
+
+""" Code actions
+map <leader>ca <Action>(ShowIntentionActions)
