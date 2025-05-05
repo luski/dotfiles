@@ -54,16 +54,12 @@ set ideastatusicon=gray
 
 " open vim configuration
 noremap <leader>fc :e ~/.ideavimrc<cr>
+
 noremap <leader>bd :q<cr>
 noremap <Esc> :nohlsearch<cr>
-map <leader>gr <Action>(RenameElement)
 map <leader>z <Action>(ToggleDistractionFreeMode)
 
 map <leader>s <Action>(SelectInProjectView)
-map <leader>gb <Action>(Annotate)
-map <leader>gh <Action>(Vcs.ShowTabbedFileHistory)
-map ]d <Action>(GotoNextError)
-map [d <Action>(GotoPreviousError)
 
 map <leader>o <Action>(FileStructurePopup)
 
@@ -87,5 +83,20 @@ map <C-l> <Action>(NextSplitter)
 map <C-Space> <Action>(EditorSelectWord)
 map <Backspace> <Action>(EditorUnSelectWord)
 
+""" surround
+" change: c, for instance cs"'
+" delete: d, for instance ds"
+" add: ys, for instance ysiw"
+" visual mode: S, for instance S[
+
 """ Code actions
 map <leader>ca <Action>(ShowIntentionActions)
+map <leader><leader> <Action>(GotoFile)
+map gd <Action>(GotoDeclaration)
+map <leader>gr <Action>(RenameElement)
+map ]d <Action>(GotoNextError)
+map [d <Action>(GotoPreviousError)
+
+""" GIT
+map <leader>gb <Action>(Annotate)
+map <leader>gh <Action>(Vcs.ShowTabbedFileHistory)
