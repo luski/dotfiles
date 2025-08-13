@@ -5,8 +5,9 @@ return {
   },
   opts = {
     package_manager = "npm",
+    autostart = false,
   },
-  config = function()
-    require("package-info").setup()
+  config = function(_, opts)
+    require("package-info").setup(opts)
   end,
 }
