@@ -16,8 +16,7 @@ paru -S --noconfirm dropbox
 
 paru -S --noconfirm xremap # to make single META button work
 
-paru -S --noconfirm elephant
-paru -S --noconfirm walker
+paru -S --noconfirm walker elephant elephant-desktopapplications elephant-websearch
 elephant service enable
 
 chezmoi init luski --branch cachyos --apply
