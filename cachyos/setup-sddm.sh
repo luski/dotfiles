@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# display manager SDDM themes
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/keyitdev/sddm-astronaut-theme/master/setup.sh)"
