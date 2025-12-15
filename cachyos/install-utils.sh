@@ -12,3 +12,4 @@ paru -S --noconfirm starship
 paru -S --noconfirm obsidian
 paru -S --noconfirm simple-scan
 paru -S --noconfirm qt5-wayland keepassxc
+paru -S --noconfirm tailscale
