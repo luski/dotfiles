@@ -8,8 +8,10 @@ paru -S --noconfirm lazygit
 paru -S --noconfirm zen-browser
 paru -S --noconfirm dropbox
 paru -S --noconfirm fnm
-paru -S --noconfirm starship
 paru -S --noconfirm obsidian
-paru -S --noconfirm simple-scan
 paru -S --noconfirm qt5-wayland keepassxc
-paru -S --noconfirm tailscale
+curl -fsSL https://tailscale.com/install.sh | sh
+paru -S --noconfirm uwsm
+
+# niri specific
+paru -S --noconfirm nwg-look adw-gtk-theme adwaita-color-schemes gnome-tweaks
