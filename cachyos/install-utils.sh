@@ -6,7 +6,7 @@ paru -S --noconfirm zoxide
 paru -S --noconfirm neovim
 paru -S --noconfirm lazygit
 paru -S --noconfirm zen-browser
-paru -S --noconfirm dropbox
+paru -S --noconfirm libappindicator dropbox
 paru -S --noconfirm fnm
 paru -S --noconfirm obsidian
 paru -S --noconfirm qt5-wayland keepassxc
