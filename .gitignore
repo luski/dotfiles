@@ -1,2 +1,3 @@
 dot_config/systemd/user/graphical-session.target.wants
 dot_config/systemd/user/timers.target.wants
+dot_config/DankMaterialShell/plugins

@@ -1,6 +1,3 @@
-# adw-toolbar-style = flat
-# gtk-titlebar = false
-#window-theme = ghostty
 adjust-cell-height = 20%
 font-size = 11
 window-padding-x = 3
@@ -8,18 +5,14 @@ window-padding-y = 0
 window-padding-balance = true
 window-padding-color = background
 custom-shader = bloom060.glsl
-
-# Omarchy?
-# Dynamic theme colors
-config-file = ?"~/.config/omarchy/current/theme/ghostty.conf"
+window-show-tab-bar = never
+theme = Atom One Dark
 
 # Font
 font-family = "CaskaydiaMono Nerd Font"
 font-style = Regular
 
 # Window
-# window-padding-x = 14
-# window-padding-y = 14
 confirm-close-surface=false
 resize-overlay = never
 
@@ -37,5 +30,10 @@ keybind = super+control+shift+alt+arrow_up=resize_split:up,100
 keybind = super+control+shift+alt+arrow_left=resize_split:left,100
 keybind = super+control+shift+alt+arrow_right=resize_split:right,100
 
+keybind = ctrl+a>c=new_tab
+keybind = ctrl+a>n=next_tab
+
 # Slowdown mouse scrolling
 mouse-scroll-multiplier = 0.95
+
+config-file = ./config-dankcolors

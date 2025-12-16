@@ -1,0 +1,9 @@
+// === WebApps ===
+binds {
+  Mod+A hotkey-overlay-title="ChatGPT" { spawn-sh "launch-webapp 'https://chatgpt.com'"; }
+  Mod+Y hotkey-overlay-title="YouTube" { spawn-sh "launch-webapp 'https://youtube.com'"; }
+
+  Mod+Escape hotkey-overlay-title="Lock Screen" {
+      spawn "dms" "ipc" "call" "lock" "lock";
+  }
+}
