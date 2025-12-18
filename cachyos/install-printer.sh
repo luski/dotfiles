@@ -5,5 +5,6 @@ paru -S --noconfirm simple-scan
 paru -S --noconfirm sane-airscan
 
 # printer
-paru -S --noconfirm brother-dcpj105
+paru -S --noconfirm cups brother-dcpj105
+sudo systemctl enable cups --now
 # ... and follow instructions
