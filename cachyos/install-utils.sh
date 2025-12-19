@@ -14,4 +14,12 @@ curl -fsSL https://tailscale.com/install.sh | sh
 paru -S --noconfirm uwsm
 
 # niri specific
-paru -S --noconfirm nwg-look adw-gtk-theme adwaita-color-schemes gnome-tweaks
+packages=(
+	nwg-look
+	adw-gtk-theme
+	adwaita-color-schemes
+	gnome-tweaks
+	swappy
+)
+
+paru -S --noconfirm "${packages[@]}"

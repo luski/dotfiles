@@ -3,4 +3,7 @@ binds {
   Mod+Y hotkey-overlay-title="YouTube" { spawn-sh "launch-webapp 'https://youtube.com'"; }
   Mod+Shift+F hotkey-overlay-title="File Explorer" { spawn "nautilus"; }
   Mod+Escape hotkey-overlay-title="Lock Screen" { spawn "dms" "ipc" "call" "lock" "lock"; }
+  Ctrl+Mod+Space hotkey-overlay-title="Bookmarks" { spawn "walker" "-m" "menus:bookmarks"; }
+
+  Print { spawn-sh "dms screenshot --stdout | swappy -f -"; }
 }
