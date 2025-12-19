@@ -22,6 +22,7 @@ packages=(
 	swappy # Screenshot tool
 	loupe  # Image viewer
 	evince # PDF viewer
+	dialect
 )
 
 paru -S --noconfirm "${packages[@]}"
