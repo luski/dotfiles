@@ -19,7 +19,9 @@ packages=(
 	adw-gtk-theme
 	adwaita-color-schemes
 	gnome-tweaks
-	swappy
+	swappy # Screenshot tool
+	loupe  # Image viewer
+	evince # PDF viewer
 )
 
 paru -S --noconfirm "${packages[@]}"
