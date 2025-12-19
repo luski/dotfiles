@@ -1,17 +1,17 @@
 #!/bin/bash
 
-paru -S --noconfirm github-cli
-paru -S --noconfirm chezmoi
-paru -S --noconfirm zoxide
-paru -S --noconfirm neovim
-paru -S --noconfirm lazygit
-paru -S --noconfirm zen-browser
-paru -S --noconfirm libappindicator dropbox
-paru -S --noconfirm fnm
-paru -S --noconfirm obsidian
-paru -S --noconfirm qt5-wayland keepassxc
+paru -S --needed --noconfirm github-cli
+paru -S --needed --noconfirm chezmoi
+paru -S --needed --noconfirm zoxide
+paru -S --needed --noconfirm neovim
+paru -S --needed --noconfirm lazygit
+paru -S --needed --noconfirm zen-browser
+paru -S --needed --noconfirm libappindicator dropbox
+paru -S --needed --noconfirm fnm
+paru -S --needed --noconfirm obsidian
+paru -S --needed --noconfirm qt5-wayland keepassxc
+paru -S --needed --noconfirm uwsm
 curl -fsSL https://tailscale.com/install.sh | sh
-paru -S --noconfirm uwsm
 
 # niri specific
 packages=(
@@ -25,4 +25,4 @@ packages=(
 	dialect
 )
 
-paru -S --noconfirm "${packages[@]}"
+paru -S --needed --noconfirm "${packages[@]}"
