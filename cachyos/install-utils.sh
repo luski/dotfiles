@@ -20,6 +20,7 @@ packages=(
 	adwaita-color-schemes
 	gnome-tweaks
 	swappy # Screenshot tool
+	satty  # alternative
 	loupe  # Image viewer
 	evince # PDF viewer
 	dialect

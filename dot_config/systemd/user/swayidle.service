@@ -1,0 +1,15 @@
+[Unit]
+Description=Idle manager (swayidle)
+PartOf=graphical-session.target
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/swayidle -w \
+  timeout 300 'qs -c noctalia-shell ipc call sessionMenu lockAndSuspend' \
+  resume '/usr/bin/niri msg output * power on'
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=graphical-session.target
