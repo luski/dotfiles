@@ -1,0 +1,35 @@
+customCommands:
+  - key: 'C'
+    context: 'global'
+    output: 'log'
+    prompts:
+      - type: 'input'
+        title: 'Commit message:'
+        key: 'CommitMessage'
+        initialValue: '{{ runCommand "git branch --show-current" }} '
+      - type: 'menu'
+        title: 'Skip notes?'
+        key: 'SkipNotes'
+        options:
+          - value: 'yes'
+            name: 'Yes'
+            key: 'y'
+          - value: 'no'
+            name: 'No'
+            key: 'n'
+      - type: 'menu'
+        title: 'Verify?'
+        key: 'Verify'
+        options:
+          - value: 'yes'
+            name: 'Yes'
+            key: 'y'
+          - value: 'no'
+            name: 'No'
+            key: 'n'
+    command: "~/.config/lazygit/commit {{.Form.CommitMessage | quote}} {{.Form.SkipNotes}} {{.Form.Verify}}"
+    loadingText: 'Creating commit'
+
+keybinding:
+  files:
+    commitChangesWithEditor: <c-C>

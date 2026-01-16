@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# $1 -> message
+# $2 -> skip notes (yes|no)
+# $3 -> verify (yes|no)
+params=()
+
+if [[ $2 == "yes" ]]; then
+	params+=('-m')
+	params+=('[skip notes]')
+fi
+
+if [[ $3 == "no" ]]; then
+	params+=("--no-verify")
+fi
+
+git commit -m "$1" "${params[@]}"
