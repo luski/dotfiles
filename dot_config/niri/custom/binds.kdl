@@ -1,4 +1,18 @@
+workspace "browser";
+workspace "development";
+workspace "email";
+workspace "chats";
+
 binds {
+    Mod+A hotkey-overlay-title="ChatGPT" { spawn-sh "launch-webapp 'https://chatgpt.com'"; }
+    Mod+Y hotkey-overlay-title="YouTube" { spawn-sh "launch-webapp 'https://youtube.com'"; }
+    // Mod+Shift+F hotkey-overlay-title="File Explorer" { spawn "nautilus"; }
+    Mod+Shift+F hotkey-overlay-title="File Explorer" { spawn "foot" "-e" "yazi"; }
+    Mod+Escape hotkey-overlay-title="Session Menu" { "spawn" "qs" "-c" "noctalia-shell" "ipc" "call" "sessionMenu" "toggle";}
+    Mod+Alt+L hotkey-overlay-title="Lock Screen" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "sessionMenu" "lockAndSuspend";}
+    Ctrl+Mod+Space hotkey-overlay-title="Bookmarks" { spawn "walker" "-m" "menus:bookmarks"; }
+
+
     // === System & Overview ===
     Mod+D repeat=false { toggle-overview; }
     Mod+Tab repeat=false { toggle-overview; }
@@ -22,30 +36,6 @@ binds {
     Mod+B hotkey-overlay-title="Open Browser" { spawn "zen-browser"; }
     // === Security ===
     Mod+Shift+E { quit; }
-    // === Audio Controls ===
-    // XF86AudioRaiseVolume allow-when-locked=true {
-    //     spawn "dms" "ipc" "call" "audio" "increment" "3";
-    // }
-    // XF86AudioLowerVolume allow-when-locked=true {
-    //     spawn "dms" "ipc" "call" "audio" "decrement" "3";
-    // }
-    // XF86AudioMute allow-when-locked=true {
-    //     spawn "dms" "ipc" "call" "audio" "mute";
-    // }
-    // XF86AudioMicMute allow-when-locked=true {
-    //     spawn "dms" "ipc" "call" "audio" "micmute";
-    // }
-    // XF86AudioPlay allow-when-locked=true {
-    //     spawn "dms" "ipc" "call" "mpris" "playPause";
-    // }
-
-    // === Brightness Controls ===
-    // XF86MonBrightnessUp allow-when-locked=true {
-    //    spawn "dms" "ipc" "call" "brightness" "increment" "5" "";
-    // }
-    // XF86MonBrightnessDown allow-when-locked=true {
-    //    spawn "dms" "ipc" "call" "brightness" "decrement" "5" "";
-    // }
 
     // === Window Management ===
     Mod+Q repeat=false { close-window; }

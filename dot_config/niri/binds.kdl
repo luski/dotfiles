@@ -1,9 +1,16 @@
+workspace "browser";
+workspace "development";
+workspace "email";
+workspace "chats";
 binds {
   Mod+A hotkey-overlay-title="ChatGPT" { spawn-sh "launch-webapp 'https://chatgpt.com'"; }
   Mod+Y hotkey-overlay-title="YouTube" { spawn-sh "launch-webapp 'https://youtube.com'"; }
-  Mod+Shift+F hotkey-overlay-title="File Explorer" { spawn "nautilus"; }
-  Mod+Escape hotkey-overlay-title="Lock Screen" { spawn "dms" "ipc" "call" "lock" "lock"; }
+  // Mod+Shift+F hotkey-overlay-title="File Explorer" { spawn "nautilus"; }
+  Mod+Shift+F hotkey-overlay-title="File Explorer" { spawn "foot" "-e" "yazi"; }
+  Mod+Escape hotkey-overlay-title="Session Menu" { "spawn" "qs" "-c" "noctalia-shell" "ipc" "call" "sessionMenu" "toggle";}
+  Mod+Alt+L hotkey-overlay-title="Lock Screen" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "sessionMenu" "lockAndSuspend";}
   Ctrl+Mod+Space hotkey-overlay-title="Bookmarks" { spawn "walker" "-m" "menus:bookmarks"; }
 
-  Print { spawn-sh "dms screenshot --stdout | swappy -f -"; }
+  Print { spawn-sh "dms screenshot --stdout | satty -f -"; }
 }
+
