@@ -34,6 +34,7 @@
         "density": "comfortable",
         "exclusive": true,
         "floating": true,
+        "hideOnOverview": false,
         "marginHorizontal": 2,
         "marginVertical": 2,
         "monitors": [
@@ -60,20 +61,10 @@
                     "unfocusedIconsOpacity": 1
                 },
                 {
-                    "defaultSettings": {
-                        "audioCodec": "opus",
-                        "audioSource": "default_output",
-                        "colorRange": "limited",
-                        "copyToClipboard": false,
-                        "directory": "",
-                        "filenamePattern": "recording_yyyyMMdd_HHmmss",
-                        "frameRate": "60",
-                        "quality": "very_high",
-                        "showCursor": true,
-                        "videoCodec": "h264",
-                        "videoSource": "portal"
-                    },
-                    "id": "plugin:screen-recorder"
+                    "hideWhenZero": true,
+                    "hideWhenZeroUnread": false,
+                    "id": "NotificationHistory",
+                    "showUnreadBadge": true
                 }
             ],
             "left": [
@@ -91,22 +82,7 @@
                     "width": 20
                 },
                 {
-                    "colorizeIcons": true,
-                    "hideMode": "hidden",
-                    "id": "ActiveWindow",
-                    "maxWidth": 300,
-                    "scrollingMode": "hover",
-                    "showIcon": true,
-                    "useFixedWidth": false
-                },
-                {
-                    "colorName": "primary",
-                    "hideWhenIdle": true,
-                    "id": "AudioVisualizer",
-                    "width": 200
-                },
-                {
-                    "compactMode": true,
+                    "compactMode": false,
                     "diskPath": "/",
                     "id": "SystemMonitor",
                     "showCpuTemp": true,
@@ -121,23 +97,20 @@
                     "usePrimaryColor": false
                 },
                 {
-                    "defaultSettings": {
-                        "currentIconName": "world-download",
-                        "hideOnZero": false,
-                        "updateIntervalMinutes": 30,
-                        "updateTerminalCommand": "foot -e"
-                    },
-                    "id": "plugin:update-count"
+                    "id": "Spacer",
+                    "width": 20
+                },
+                {
+                    "colorizeIcons": true,
+                    "hideMode": "hidden",
+                    "id": "ActiveWindow",
+                    "maxWidth": 300,
+                    "scrollingMode": "hover",
+                    "showIcon": true,
+                    "useFixedWidth": false
                 }
             ],
             "right": [
-                {
-                    "defaultSettings": {
-                        "hideInactive": false,
-                        "removeMargins": false
-                    },
-                    "id": "plugin:privacy-indicator"
-                },
                 {
                     "blacklist": [
                     ],
@@ -146,12 +119,11 @@
                     "hidePassive": false,
                     "id": "Tray",
                     "pinned": [
+                        "You have unread messages",
+                        "Browser-Passwords - KeePassXC",
+                        "No unread messages",
+                        "BrowserPasswords.kdbx [Locked] - KeePassXC"
                     ]
-                },
-                {
-                    "hideWhenZero": true,
-                    "id": "NotificationHistory",
-                    "showUnreadBadge": true
                 },
                 {
                     "deviceNativePath": "",
@@ -185,7 +157,7 @@
                     "id": "Clock",
                     "tooltipFormat": "HH:mm ddd, MMM dd",
                     "useCustomFont": true,
-                    "usePrimaryColor": false
+                    "usePrimaryColor": true
                 },
                 {
                     "defaultSettings": {
@@ -202,13 +174,20 @@
                         "videoSource": "portal"
                     },
                     "id": "plugin:screen-recorder"
+                },
+                {
+                    "defaultSettings": {
+                        "hideInactive": false,
+                        "removeMargins": false
+                    },
+                    "id": "plugin:privacy-indicator"
                 }
             ]
         }
     },
     "brightness": {
         "brightnessStep": 5,
-        "enableDdcSupport": false,
+        "enableDdcSupport": true,
         "enforceMinimum": true
     },
     "calendar": {
@@ -300,23 +279,17 @@
             {
                 "name": "eDP-1",
                 "widgets": [
-                    {
-                        "clockStyle": "digital",
-                        "customFont": "",
-                        "format": "HH:mm\\nd MMMM yyyy",
-                        "id": "Clock",
-                        "roundedCorners": true,
-                        "showBackground": true,
-                        "useCustomFont": false,
-                        "usePrimaryColor": false,
-                        "x": 50,
-                        "y": 50
-                    },
+                ]
+            },
+            {
+                "name": "DP-3",
+                "widgets": [
                     {
                         "id": "Weather",
+                        "scale": 1,
                         "showBackground": true,
                         "x": 40,
-                        "y": 220
+                        "y": 80
                     }
                 ]
             }
@@ -363,7 +336,8 @@
         "showChangelogOnStartup": true,
         "showHibernateOnLockScreen": true,
         "showScreenCorners": false,
-        "showSessionButtonsOnLockScreen": true
+        "showSessionButtonsOnLockScreen": true,
+        "telemetryEnabled": false
     },
     "hooks": {
         "darkModeChange": "",
@@ -372,6 +346,7 @@
         "performanceModeEnabled": "",
         "screenLock": "",
         "screenUnlock": "",
+        "session": "",
         "wallpaperChange": ""
     },
     "location": {
@@ -409,6 +384,7 @@
         "backgroundOpacity": 1,
         "criticalUrgencyDuration": 15,
         "enableKeyboardLayoutToast": true,
+        "enableMediaToast": false,
         "enabled": true,
         "location": "top_right",
         "lowUrgencyDuration": 3,
@@ -494,7 +470,7 @@
         "showHeader": true,
         "showNumberLabels": true
     },
-    "settingsVersion": 39,
+    "settingsVersion": 41,
     "systemMonitor": {
         "cpuCriticalThreshold": 80,
         "cpuPollingInterval": 3000,
@@ -520,32 +496,41 @@
         "warningColor": ""
     },
     "templates": {
-        "alacritty": false,
-        "cava": false,
-        "code": false,
-        "discord": false,
-        "emacs": false,
-        "enableUserTemplates": true,
-        "foot": true,
-        "fuzzel": false,
-        "ghostty": true,
-        "gtk": true,
-        "helix": false,
-        "hyprland": false,
-        "kcolorscheme": true,
-        "kitty": false,
-        "mango": false,
-        "niri": true,
-        "pywalfox": false,
-        "qt": true,
-        "spicetify": false,
-        "telegram": false,
-        "vicinae": false,
-        "walker": true,
-        "wezterm": false,
-        "yazi": true,
-        "zed": false,
-        "zenBrowser": false
+        "activeTemplates": [
+            {
+                "enabled": true,
+                "id": "gtk"
+            },
+            {
+                "enabled": true,
+                "id": "qt"
+            },
+            {
+                "enabled": true,
+                "id": "kcolorscheme"
+            },
+            {
+                "enabled": true,
+                "id": "ghostty"
+            },
+            {
+                "enabled": true,
+                "id": "foot"
+            },
+            {
+                "enabled": true,
+                "id": "walker"
+            },
+            {
+                "enabled": true,
+                "id": "yazi"
+            },
+            {
+                "enabled": true,
+                "id": "niri"
+            }
+        ],
+        "enableUserTemplates": true
     },
     "ui": {
         "bluetoothDetailsViewMode": "grid",
@@ -573,7 +558,7 @@
         ],
         "overviewEnabled": false,
         "panelPosition": "follow_bar",
-        "randomEnabled": true,
+        "randomEnabled": false,
         "randomIntervalSec": 300,
         "recursiveSearch": true,
         "setWallpaperOnAllMonitors": true,

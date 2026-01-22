@@ -1,0 +1,25 @@
+spawn-at-startup "thunderbird";
+
+workspace "browser" {
+  open-on-output "DP-3";
+}
+workspace "development"{
+  open-on-output "DP-3";
+}
+workspace "email"{
+  open-on-output "DP-3";
+}
+workspace "chats"{
+  open-on-output "DP-3";
+}
+
+window-rule {
+  match app-id="Slack";
+  open-on-workspace "chats";
+};
+
+window-rule {
+  match app-id="Thunderbird";
+  open-on-workspace "email";
+};
+

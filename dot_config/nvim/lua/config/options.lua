@@ -7,7 +7,8 @@ vim.wo.foldmethod = "manual"
 vim.opt.title = true
 vim.opt.titlelen = 0 -- do not shorten title
 vim.diagnostic.config({
-	virtual_lines = {
-		current_line = true,
-	},
+  virtual_lines = {
+    current_line = true,
+  },
 })
+vim.g.lazyvim_eslint_auto_format = false

@@ -19,8 +19,10 @@ packages=(
 	adw-gtk-theme
 	adwaita-color-schemes
 	gnome-tweaks
-	swappy # Screenshot tool
-	satty  # alternative
+	# Screenshot tools:
+	slurp
+	gradia
+	grim
 	loupe  # Image viewer
 	evince # PDF viewer
 	dialect

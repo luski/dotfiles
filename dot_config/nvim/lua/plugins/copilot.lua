@@ -1,5 +1,5 @@
 return {
-  { "AndreM222/copilot-lualine" },
+  -- { "AndreM222/copilot-lualine" },
   -- {
   -- 	"nvim-lualine/lualine.nvim",
   -- 	event = "VeryLazy",
@@ -19,16 +19,17 @@ return {
   -- 		)
   -- 	end,
   -- },
-  {
-    "zbirenbaum/copilot.lua",
-    cmd = "Copilot",
-    build = ":Copilot auth",
-    event = "InsertEnter",
-    config = function()
-      require("copilot").setup({
-        filetypes = { yaml = true, sh = true },
-        suggestion = { auto_trigger = true },
-      })
-    end,
-  },
+  -- {
+  --   "zbirenbaum/copilot.lua",
+  --   enable = false,
+  --   cmd = "Copilot",
+  --   build = ":Copilot auth",
+  --   event = "InsertEnter",
+  --   config = function()
+  --     require("copilot").setup({
+  --       filetypes = { yaml = true, sh = true },
+  --       suggestion = { auto_trigger = true },
+  --     })
+  --   end,
+  -- },
 }

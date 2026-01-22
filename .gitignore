@@ -1,3 +1,11 @@
 dot_config/systemd/user/graphical-session.target.wants
 dot_config/systemd/user/timers.target.wants
 dot_config/DankMaterialShell/plugins
+dot_config/noctalia/plugins/keybind-cheatsheet/i18n
+dot_config/noctalia/plugins/keybind-cheatsheet
+dot_config/noctalia/plugins/privacy-indicator/i18n
+dot_config/noctalia/plugins/privacy-indicator
+dot_config/noctalia/plugins/screen-recorder
+dot_config/noctalia/plugins/todo/i18n
+dot_config/noctalia/plugins
+dot_local/bin/symlink_claude

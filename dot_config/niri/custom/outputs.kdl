@@ -1,0 +1,5 @@
+output "eDP-1" {
+  layout {
+    default-column-width { fixed 1480; }
+  }
+}

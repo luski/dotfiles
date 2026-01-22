@@ -8,6 +8,7 @@ return {
       typescriptreact = { "biome", "prettierd", stop_after_first = true },
       json = { "biome", "prettierd", stop_after_first = true },
       css = { "prettierd" },
+      scss = { "prettierd" },
       html = { "prettierd" },
       markdown = { "prettierd" },
       vue = { "prettierd" },

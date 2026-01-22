@@ -1,5 +1,3 @@
-spawn-at-startup "qs" "-c" "noctalia-shell"
-
 config-notification {
     disable-failed
 }
@@ -195,11 +193,11 @@ recent-windows {
     }
 }
 
+include "./noctalia.kdl"
+include "custom/binds.kdl"
 include "custom/colors.kdl"
 include "custom/layout.kdl"
 include "custom/alttab.kdl"
 include "custom/binds.kdl"
-include "workspaces.kdl"
-
-include "./noctalia.kdl"
-include "./thinkpad/config.kdl"
+include "custom/workspaces.kdl"
+include "custom/outputs.kdl"
