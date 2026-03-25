@@ -69,6 +69,9 @@ vim.keymap.set(
 vim.keymap.set("x", "<leader>p", '"_dP', { desc = "Paste without replacing the buffer" })
 
 -- Biome Linting
-vim.keymap.set("n", "<leader>bl", ":BiomeLintAll<CR>", { desc = "Biome Lint (all)" })
-vim.keymap.set("n", "<leader>be", ":BiomeLintErrors<CR>", { desc = "Biome Lint (errors only)" })
-vim.keymap.set("n", "<leader>bw", ":BiomeLintErrorsAndWarnings<CR>", { desc = "Biome Lint (errors and warnings only)" })
+-- vim.keymap.set("n", "<leader>bl", ":BiomeLintAll<CR>", { desc = "Biome Lint (all)" })
+-- vim.keymap.set("n", "<leader>be", ":BiomeLintErrors<CR>", { desc = "Biome Lint (errors only)" })
+-- vim.keymap.set("n", "<leader>bw", ":BiomeLintErrorsAndWarnings<CR>", { desc = "Biome Lint (errors and warnings only)" })
+
+require("my.keymaps.rust_cp")
+require("my.keymaps.sf_gui")

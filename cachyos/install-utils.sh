@@ -26,6 +26,7 @@ packages=(
 	loupe  # Image viewer
 	evince # PDF viewer
 	dialect
+	wlr-which-key
 )
 
 paru -S --needed --noconfirm "${packages[@]}"

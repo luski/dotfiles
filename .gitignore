@@ -9,3 +9,4 @@ dot_config/noctalia/plugins/screen-recorder
 dot_config/noctalia/plugins/todo/i18n
 dot_config/noctalia/plugins
 dot_local/bin/symlink_claude
+/dot_config/kitty/sessions
