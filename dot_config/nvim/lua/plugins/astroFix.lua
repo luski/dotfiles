@@ -19,7 +19,7 @@ return {
       ) or (type(uri) == "string" and uri:match("%.astro$"))
 
       if is_astro and td then
-        td.version = nil
+        td.version = vim.NIL
       end
 
       return orig(edit, enc, bufnr)

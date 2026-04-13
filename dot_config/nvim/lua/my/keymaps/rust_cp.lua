@@ -30,7 +30,7 @@ local function run_rust_with_fzf()
           source_file,
           output_bin
         )
-        local run = string.format("%s < %s", output_bin, input_path)
+        local run = string.format("RUST_BACKTRACE=1 %s < %s", output_bin, input_path)
         local full_cmd = compile .. " && echo '\n--- WYNIK: " .. input_file .. " ---\n' && " .. run
 
         -- Snacks.terminal z konfiguracją dolnego okna
