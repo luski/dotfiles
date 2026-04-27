@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+if [[ $# -eq 0 ]]; then
+  echo "Usage: to-webp <file(s)>"
+  exit 1
+fi
+
+for f in "$@"; do
+  [[ -f "$f" ]] || continue
+  ext="${f##*.}"
+  cwebp "$f" -o "${f%.$ext}.webp"
+done

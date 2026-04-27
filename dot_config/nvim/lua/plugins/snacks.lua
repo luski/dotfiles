@@ -1,4 +1,8 @@
 return {
-	"snacks.nvim",
-	-- opts = { gitbrowse = { enabled = true }, rename = { enabled = true } },
+  "folke/snacks.nvim",
+  opts = {
+    scroll = {
+      enabled = false,
+    },
+  },
 }
