@@ -1,0 +1,6 @@
+window-rule {
+  match title="Google Chrome for Testing"
+  open-floating true
+  open-on-output "HDMI-A-1"
+  open-focused false
+}

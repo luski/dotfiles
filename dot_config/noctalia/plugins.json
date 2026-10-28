@@ -2,12 +2,16 @@
     "sources": [
         {
             "enabled": true,
-            "name": "Official Noctalia Plugins",
+            "name": "Noctalia Plugins",
             "url": "https://github.com/noctalia-dev/noctalia-plugins"
         }
     ],
     "states": {
         "keybind-cheatsheet": {
+            "enabled": true,
+            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
+        },
+        "notes-scratchpad": {
             "enabled": true,
             "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
         },
@@ -22,11 +26,7 @@
         "todo": {
             "enabled": true,
             "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
-        },
-        "translator": {
-            "enabled": true,
-            "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
         }
     },
-    "version": 1
+    "version": 2
 }

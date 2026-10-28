@@ -1,16 +1,17 @@
 spawn-at-startup "thunderbird";
+spawn-at-startup "solaar";
 
 workspace "browser" {
-  open-on-output "DP-3";
+  open-on-output "DP-1";
 }
 workspace "development"{
-  open-on-output "DP-3";
+  open-on-output "DP-1";
 }
 workspace "email"{
-  open-on-output "DP-3";
+  open-on-output "DP-1";
 }
 workspace "chats"{
-  open-on-output "DP-3";
+  open-on-output "DP-1";
 }
 
 window-rule {

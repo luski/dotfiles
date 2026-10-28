@@ -10,7 +10,12 @@ return {
       use_as_default_explorer = true,
     },
     windows = {
-      width_preview = 100,
+      -- Width of focused window
+      width_focus = 50,
+      -- Width of non-focused window
+      width_nofocus = 15,
+      -- Width of preview window
+      width_preview = 75,
     },
   },
   keys = {

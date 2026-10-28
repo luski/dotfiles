@@ -1,5 +1,20 @@
-output "eDP-1" {
-  layout {
-    default-column-width { fixed 1480; }
-  }
+// dell
+output "DP-3" {
+  position x=0 y=0
+    focus-at-startup
 }
+
+// built-in
+output "eDP-1" {
+  position x=2560 y=0
+    layout {
+        default-column-width {
+            fixed 1480
+        }
+    }
+}
+// BenQ
+output "DP-1" {
+  scale 1.5
+}
+

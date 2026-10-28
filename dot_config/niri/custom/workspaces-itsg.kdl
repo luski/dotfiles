@@ -1,0 +1,25 @@
+spawn-at-startup "thunderbird";
+
+workspace "browser" {
+  open-on-output "HDMI-A-1";
+}
+workspace "development"{
+  open-on-output "HDMI-A-1";
+}
+workspace "email"{
+  open-on-output "HDMI-A-1";
+}
+workspace "chats"{
+  open-on-output "HDMI-A-1";
+}
+
+window-rule {
+  match app-id="Slack";
+  open-on-workspace "chats";
+};
+
+window-rule {
+  match app-id="Thunderbird";
+  open-on-workspace "email";
+};
+
